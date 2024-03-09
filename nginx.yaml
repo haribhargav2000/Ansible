@@ -1,0 +1,9 @@
+---
+- name: install nginx server
+  hosts: all
+  become: yes
+  tasks:
+    - name: install nginx using apt
+      ansible.builtin.apt:
+        name: nginx
+        update_cache: yes
